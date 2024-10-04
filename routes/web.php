@@ -3,9 +3,26 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+$posts = [
+    ['title' => 'post 1'],
+    ['title' => 'post 2'],
+    ['title' => 'post 3'],
+    ['title' => 'post 4'],
+];
+
 Route::view('/', 'welcome')->name('home');
 Route::view('contacto','contact')->name('contact');
-Route::view('blog','blog')->name('blog');
+Route::get('blog',function () {
+    $posts = [
+        ['title' => 'post 1'],
+        ['title' => 'post 2'],
+        ['title' => 'post 3'],
+        ['title' => 'post 4'],
+    ];
+return view('blog',compact(var_name: 'posts'));
+
+})->name('blog');
+
 Route::view('nosotros','about')->name('about');
 
 
