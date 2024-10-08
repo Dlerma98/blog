@@ -1,17 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
     public function index()
     {
-          $posts = [
-              ['title' => 'post 1'],
-              ['title' => 'post 2'],
-              ['title' => 'post 3'],
-              ['title' => 'post 4'],
-          ];
+          $posts = DB::table("posts")->get();
+
+
           return view('blog',compact(var_name: 'posts'));
 
 
