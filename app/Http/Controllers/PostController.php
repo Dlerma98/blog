@@ -7,11 +7,16 @@ class PostController extends Controller
 {
     public function index()
     {
-          $posts = Post::get();
+        $posts = Post::get();
 
 
-          return view('blog',compact(var_name: 'posts'));
+        return view('blog', compact(var_name: 'posts'));
 
+
+    }
+    public function show(Post $post)
+    {
+        
 
 
     }
