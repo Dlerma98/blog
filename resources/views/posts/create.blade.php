@@ -1,4 +1,5 @@
 <x-layout meta-title="Create a new Post" meta-description="Form to create a new Post">
+
     <h1>{{ __('Create a new Post') }}</h1>
 
 
@@ -22,11 +23,11 @@
             @error('body')
             <br />
             <small style="color:red">{{$message}}</small>
+
             @enderror
         </label>
         <br />
-        <button type="submit">{{__("Send")}}</button>
+            <button type="submit">{{__("Send")}}</button>
         <br/>
-    </form>
     <a href="{{ route('posts.index') }}">{{__("Back")}}</a>
 </x-layout>

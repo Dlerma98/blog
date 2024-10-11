@@ -29,6 +29,7 @@ class PostController extends Controller
     public  function store(Request $request)
     {
 
+
         $request -> validate([
             'title' => 'required|min:5',
             'body' => 'required',
@@ -36,6 +37,7 @@ class PostController extends Controller
             'title.required' => 'El titulo es obligatorio',
             'body.required' => 'El contenido es obligatorio',
         ]);
+
        $post = new Post();
        $post -> title = $request->input('title');
        $post  ->body = $request -> input('body');
