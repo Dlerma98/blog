@@ -51,4 +51,12 @@ class PostController extends Controller
     {
         return view('posts.edit', compact('post'));
     }
+    public function update(Request $request, Post $post)
+    {
+   $request -> validate([
+       'title' => 'required|min:5',
+       'body' => 'required',
+   ]);
+
+    }
 }
