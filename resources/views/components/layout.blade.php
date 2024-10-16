@@ -8,7 +8,7 @@
     <meta name="description" content="{{ $metaDescription ?? 'Default description' }}">
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
-<body class="flex h-screen flex-col bg-slate-100 selection:bg-sky-600 selection:text-sky-50">
+<body class="flex h-screen flex-col bg-slate-100 selection:bg-sky-600 selection:text-sky-50 dark:bg-slate-950">
 <x-partials.navigation />
 
 @session('status')
