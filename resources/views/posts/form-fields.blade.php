@@ -9,7 +9,7 @@
 <br />
 <label>
     {{__('Body')}} <br />
-    <textarea name="body"  {{old('body', $post -> body)}} ></textarea>
+    <textarea name="body"  {{old('body', $post->body)}} ></textarea>
 
     @error('body')
     <br />
