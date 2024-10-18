@@ -1,4 +1,4 @@
-<x-layout :meta-title="$post->title" :meta-description="$post->body">
+<x-app-layout :meta-title="$post->title" :meta-description="$post->body">
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -26,4 +26,4 @@
     </div>
 
 
-</x-layout>
+</x-app-layout>

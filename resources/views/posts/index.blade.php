@@ -84,7 +84,6 @@
                         </div>
                     </div>--}}
                 </article>
-        </div>
-        @endforeach
+            @endforeach
     </div>
 </x-layout>
